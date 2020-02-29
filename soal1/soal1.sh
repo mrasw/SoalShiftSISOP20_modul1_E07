@@ -16,5 +16,6 @@ awk '{l[$11" "$13] += $NF}END {for(i in l) if(i!="Region") print i, l[i]}' lagi1
 
 #C_Finish
 
- awk '{l[$17" "$11" "$13] += $NF}END {for(i in l) if(i!="Region") print i, l[i]}' lagi1_1.csv | sort -grk4 | head -n10
+awk '/Central/{l[$17" "$11" "$13] += $NF}END {for(i in l) if(i!="Region") print i, l[i]}' lagi1_1.csv | sort -grk4 | head -n10
+
 
